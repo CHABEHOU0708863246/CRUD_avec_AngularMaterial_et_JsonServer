@@ -1,0 +1,76 @@
+<div class="container allstudents-container">
+  <a mat-raised-button color="primary" routerLink="/addStudent">Ajouter un étudiant</a>&nbsp;&nbsp;
+  <button type="button" mat-raised-button color="primary" (click)="exportAsExcelFile()" class="p-button-success p-mr-2">Exportez les données</button>
+</div>
+
+<div class="container allstudents-container">
+  <table mat-table [dataSource]="allStudentsSource" class="mat-elevation-z8">
+    <!-- La « dataSource » est une propriété de table de matériaux qui attend un tableau de données qui doit être rendu sur la table -->
+
+
+
+    <!-- La valeur 'matColumnDef' doit être l’une des valeurs enregistrées dans la variable 'displayColumns'. -->
+
+    <!-- Les attributs 'matCellDef' peuvent lire chaque élément individuel à partir de la variable 'dataSource'. -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>Id</th>
+      <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="firstName">
+      <th mat-header-cell *matHeaderCellDef>Prénom(s)</th>
+      <td mat-cell *matCellDef="let element">{{ element.firstName }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="lastName">
+      <th mat-header-cell *matHeaderCellDef>Nom</th>
+      <td mat-cell *matCellDef="let element">{{ element.lastName }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="gender">
+      <th mat-header-cell *matHeaderCellDef>Genre</th>
+      <td mat-cell *matCellDef="let element">{{ element.gender }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="age">
+        <th mat-header-cell *matHeaderCellDef>Age</th>
+        <td mat-cell *matCellDef="let element">{{ element.age }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef>Email</th>
+        <td mat-cell *matCellDef="let element">{{ element.email }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="profession" >
+        <th mat-header-cell *matHeaderCellDef>Profession</th>
+        <td mat-cell *matCellDef="let element">{{ element.profession }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>Actions</th>
+        <td mat-cell *matCellDef="let element">
+        <a [routerLink]="['/editStudent', element.id]"
+          ><mat-icon
+          aria-hidden="false"
+          aria-label="Example home icon"
+          fontIcon="edit"
+          >
+          </mat-icon
+        ></a>
+        <mat-icon
+          (click)="openDeleteModal(element.id)"
+          aria-hidden="false"
+          aria-label="Example delete icon"
+          fontIcon="delete"
+        >
+        </mat-icon>
+        </td>
+      </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedCollumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedCollumns"></tr>
+  </table>
+</div>
+
+

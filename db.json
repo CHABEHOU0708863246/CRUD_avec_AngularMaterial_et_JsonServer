@@ -1,0 +1,67 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "firstName": "Affery Auxence Delors",
+      "lastName": "CHABEHOU",
+      "gender": "Female",
+      "age": 26,
+      "email": "auxence.chabehou@gmail.com",
+      "profession": "Developpeur Junior Full Stack Angular & .NET"
+    },
+    {
+      "id": 2,
+      "firstName": "Carmel",
+      "lastName": "CHABEHOU",
+      "gender": "Masculin",
+      "age": 22,
+      "email": "carmel.chabehou@gmail.com",
+      "profession": "Developpeur Junior C++"
+    },
+    {
+      "id": 3,
+      "firstName": "Yvan",
+      "lastName": "CHABEHOU",
+      "gender": "Masculin",
+      "age": 18,
+      "email": "yvan.chabehou@gmail.com",
+      "profession": "Etudiant en Comptabilité"
+    },
+    {
+      "id": 4,
+      "firstName": "eliasse ginette cheli",
+      "lastName": "CHABEHOU",
+      "gender": "Female",
+      "age": 30,
+      "email": "eliasse.chabehou@gmail.com",
+      "profession": "Staticienne à INS"
+    },
+    {
+      "id": 5,
+      "firstName": "Eddoh jean-jaures",
+      "lastName": "CHABEHOU",
+      "gender": "Male",
+      "age": 35,
+      "email": "eddoh@gmail.com",
+      "profession": "CHEF DE PROJET INFORMATIQUE"
+    },
+    {
+      "id": 6,
+      "firstName": "Doffou Alix Aymard B",
+      "lastName": "CHABEHOU",
+      "gender": "Male",
+      "age": 36,
+      "email": "alix@gmail.com",
+      "profession": "Ingénieur Economiste"
+    },
+    {
+      "id": 7,
+      "firstName": "Rose Monde-Charlène",
+      "lastName": "CHABEHOU",
+      "gender": "Male",
+      "age": 40,
+      "email": "rose@gmail.com",
+      "profession": "Ingenieur mecanique"
+    }
+  ]
+}
